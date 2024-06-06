@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+    <meta charset='UTF-8'>
+    <title>Megha ❤️ Varun</title>
+
+    <meta name="robots" content="noindex">
+
+
+    <style id="INLINE_PEN_STYLESHEET_ID">
+        @import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+        @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+        .reveal-letter {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .baby-crawl {
+            opacity: 0;
+        }
+
+        dialog {
+            animation: fade-out 0.2s ease-out;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 400px;
+            padding: 0;
+            margin-left: 53%;
+        }
+
+        dialog[open] {
+            animation: fade-in 0.5s ease-out;
+        }
+
+        /* dialog[open]::backdrop {
+            animation: backdrop-fade-in 0.7s ease-out forwards;
+        } */
+
+        .btn {
+            border: 1px solid #ddd;
+        }
+
+        /* .btn-primary {
+            background-color: #a94442 !important;
+        } */
+
+        .btn-primary,
+        .btn-default {
+            border-radius: 50px !important;
+            padding: 10px 20px !important;
+            background: brown !important;
+            color: white !important;
+            border: 2px dashed #d15455 !important;
+        }
+
+        .btn-primary:hover,
+        .btn-default:hover {
+            background-color: #d15455 !important;
+        }
+
+        .form-control {
+            border-radius: 50px !important;
+            height: 40px !important;
+            border: 1px dashed !important;
+        }
+
+        .modal-question {
+            margin-bottom: 30px !important;
+        }
+
+        .modal-title {
+            font-size: 22px;
+        }
+
+        /* Animation keyframes */
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: scaleY(0.5);
+                display: none;
+                transform: translateX(20%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+                display: block;
+                transform: translateX(0%);
+            }
+        }
+
+        /* 
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+                transform: scaleY(1);
+                display: block;
+            }
+
+            100% {
+                opacity: 0;
+                transform: scaleY(0.5);
+                display: none;
+            }
+        } */
+
+        @keyframes backdrop-fade-in {
+            0% {
+                background-color: rgb(0 0 0 / 0%);
+            }
+
+            100% {
+                background-color: rgb(0 0 0 / 25%);
+            }
+        }
+
+        @keyframes toon-shake {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        img {
+            animation: toon-shake infinite 1s ease-in;
+        }
+
+        body,
+        button {
+            font-family: system-ui;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Dancing Script' !important;
+        }
+
+        body {
+            background: #E5E5E5;
+            /* background-image: url("/gray-floral.png"); */
+            padding-top: 40px;
+        }
+
+        #card-front {
+            color: #FFDFDF;
+        }
+
+        #card,
+        #card-front,
+        #card-inside {
+            height: 480px;
+        }
+
+        .wrap {
+            padding: 1.5em 2.5em;
+            height: 100%;
+        }
+
+        #card-front,
+        #card-inside {
+            border-radius: 10px !important;
+            width: 50%;
+            -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+            -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+            position: absolute;
+            left: 50%;
+        }
+
+
+        #card-inside .wrap {
+            border-radius: 10px !important;
+            background: #FFEFEF;
+            -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+            -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+            box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+            box-shadow: inset 20px 0 10px rgba(0, 0, 0, 0.05) !important;
+            border-left: 1px solid rgb(189, 118, 118) !important;
+        }
+
+        #card {
+            max-width: 960px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            perspective: 5000px;
+            -moz-perspective: 5000px;
+            -webkit-perspective: 5000px;
+            position: relative;
+        }
+
+        #card h1 {
+            text-align: center;
+            font-family: 'Nobile', sans-serif;
+            font-style: italic;
+            font-size: 70px;
+            text-shadow:
+                4px 4px 0px rgba(0, 0, 0, .15),
+                1px 1px 0 rgba(255, 200, 200, 255),
+                2px 2px 0 rgba(255, 150, 150, 255),
+                3px 3px 0 rgba(255, 125, 125, 255);
+            color: #FFF;
+        }
+
+        #card-inside {
+            font-size: 1.1em;
+            line-height: 1.4;
+            font-family: 'Nobile';
+            color: #331717;
+            font-style: italic;
+        }
+
+        p {
+            margin-top: 1em;
+        }
+
+        p:first-child {
+            margin-top: 0;
+        }
+
+        p.signed {
+            margin-top: 1.5em;
+            text-align: center;
+            font-family: 'Dancing Script', sans-serif;
+            font-size: 1.5em;
+        }
+
+        #card-front {
+            border-radius: 8px;
+            background-color: #FF5555;
+            background-image: linear-gradient(top, #FF5555 0%, #FF7777 100%);
+            background-image: -moz-linear-gradient(top, #FF5555 0%, #FF7777 100%);
+            background-image: -webkit-linear-gradient(top, #FF5555 0%, #FF7777 100%);
+            /* background: #7e0d1d; */
+            border: 3px dotted #333;
+            border-style: dashed;
+            box-shadow: 0 0 0 10px #FF5555;
+            transform-origin: left;
+            -moz-transform-origin: left;
+            -webkit-transform-origin: left;
+            transition: transform 1s linear;
+            -moz-transition: -moz-transform 1s linear;
+            -webkit-transition: -webkit-transform 1s linear;
+            position: relative;
+        }
+
+        #card-front .wrap {
+            transition: background 1s linear;
+            -moz-transition: background 1s linear;
+            -webkit-transition: background 1s linear;
+        }
+
+        #card-front button {
+            position: absolute;
+            bottom: 1em;
+            right: -21px;
+            height: 45px;
+            border-radius: 100%;
+            /* width: 60px; */
+            background: #7e0d1d;
+            color: #FFF;
+            /*font-family: 'Nobile', sans-serif;*/
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.5em;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+            /*box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+            -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+            -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);*/
+        }
+
+        #card-front button:hover,
+        #card-front button:focus {
+            background: #F22;
+        }
+
+        #close {
+            display: none;
+        }
+
+        #card.open-fully #close,
+        #card-open-half #close {
+            display: inline;
+        }
+
+        #card.open-fully #open {
+            display: none;
+        }
+
+
+        #card.open-half #card-front,
+        #card.close-half #card-front {
+            transform: rotateY(-90deg);
+            -moz-transform: rotateY(-90deg);
+            -webkit-transform: rotateY(-90deg);
+        }
+
+        #card.open-half #card-front .wrap {
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        #card.open-fully #card-front,
+        #card.close-half #card-front {
+            background: url('./2.png') no-repeat;
+            border-style: unset !important;
+            box-shadow: unset !important;
+            background-color: #FFEFEF;
+            border-radius: 8px !important;
+            /* background-position: left;
+            background-size: contain; */
+        }
+
+        #card.open-fully #card-front {
+            transform: rotateY(-180deg);
+            -moz-transform: rotateY(-180deg);
+            -webkit-transform: rotateY(-180deg);
+        }
+
+        #card.open-fully #card-front .wrap {
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: inset 20px 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        #card.open-fully #card-front .wrap *,
+        #card.close-half #card-front .wrap * {
+            display: none;
+        }
+
+        footer {
+            max-width: 500px;
+            margin: 40px auto;
+            font-family: 'Nobile', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #888;
+            text-align: center;
+        }
+
+        #alertDialog,
+        #questionDialog {
+            background: transparent !important;
+            border: none !important
+        }
+
+        .modal-header,
+        .modal-footer {
+            border: none !important
+        }
+
+
+        #main-message p {
+            opacity: 0;
+        }
+
+        .show-slow>p:nth-child(1) {
+            animation: fade-in 1s forwards;
+        }
+
+        .show-slow>p:nth-child(3) {
+            animation: fade-in 1s .8s forwards;
+        }
+
+        .show-slow>p:nth-child(5) {
+            animation: fade-in 1s 3s forwards;
+        }
+
+        .show-slow>p:nth-child(6) {
+            animation: fade-in 1s 6s forwards;
+        }
+
+        .show-slow>p:nth-child(7) {
+            animation: fade-in 1s 7s forwards;
+        }
+
+        .show-slow>p:nth-child(8) {
+            animation: fade-in 1s 9s forwards;
+        }
+
+        .show-slow>p:nth-child(9) {
+            animation: fade-in 1s 9.5s forwards;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background: url('./3.png'); background-position:center; height: 100vh; background-size: contain;">
+    <div id="card">
+        <div id="card-inside">
+            <div class="wrap " style="overflow: hidden;">
+
+                <div id="main-message" style="font-size: 18px;">
+                    <p>My Crazy Family,</p> <br>
+                    <p>My name is uhmm........ I don't know yet! <span style="font-style: normal;">🤨</span></p> <br>
+                    <p>I don't know how you'll feel about me <span style="font-style: normal;">🤭</span>, But I have
+                        already chosen you to be my lovely..., wait you decide who wants to be my favourite, masiii &
+                        masaaa</p> <br>
+                    <p>
+                        <span style="color: darkgoldenrod;">aiuw;nfc io;ej 💨</span>
+                        oops I farted!
+                    </p>
+
+                    <p>ok bye!! I am not allowed to talk yet <span style="font-style: normal;">🤫</span>, See you in 8
+                        months <span style="font-style: normal;">👶🏻</span></p>
+                    <p class="signed">Little Panda</p>
+                </div>
+                <dialog id="alertDialog">
+                    <div class="modal-header">
+                        <div class="modal-title">Title</div>
+                    </div>
+                    <div class="modal-body">
+                        Content
+                    </div>
+                    <div class="modal-footer">
+                        <button id="alertDialogClose" class="btn btn-default btn-close">Okay</button>
+                    </div>
+                </dialog>
+                <dialog id="questionDialog">
+                    <!-- <div class="modal-header">
+                        <div class="modal-title">Title</div>
+                    </div> -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="modal-question">question</label>
+                            <input placeholder="Type your answer" type="text" class="form-control" id="answerInput">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button id="questionDialogClose" class="btn btn-default btn-close">Close</button> -->
+                        <button id="questionDialogTry" class="btn btn-primary">Lets check your answer</button>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+
+        <div id="card-front">
+            <div class="wrap">
+                <h1>Dear</h1>
+                <h1>Crazy family</h1>
+                <img src="./1.png" />
+            </div>
+            <button id="open">
+                <span class="fa fa-arrow-right"></span>
+            </button>
+            <button id="close">
+                <span class="fa fa-arrow-right"></span>
+            </button>
+        </div>
+    </div>
+    <!-- oops, you cannot open this card until you pass the eligibility test  -->
+
+    <!-- <script  src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-1a964890-4119-bac8-700e-152097a7eff9" crossorigin></script> -->
+    <img class="reveal-letter" style="position: fixed; top: 0;" src="6.gif" width="100%">
+</body>
+<marquee class="baby-crawl" scrollamount="3" direction="right"><img style="margin-top: 50px;" height="180px"
+        src="./5.gif"></marquee>
+<script type="text/javascript">
+    $(document).ready(() => {
+        function $id(id) {
+            return document.getElementById(id);
+        }
+        var count = 0;
+        // const riddles = [
+        //     {
+        //         question: 'Question 1',
+        //         options: ['1', '2', '3', '4'],
+        //         answer: ['1', '3']
+        //     }
+        // ]
+        var questions = ['What is you favourite holiday destination?', 'What is your father\'s daughter\'s son\'s sister\'s aunt\'s favourite breakfast drink ? '];
+        var answers = ['turkey', 'chai'];
+        var card = $('#card'),
+            openB = $('#open'),
+            closeB = $('#close'),
+            timer = null;
+        openB.on('click', function () {
+            let final = false;
+            if (count == questions.length) {
+                final = true
+                // openCard()
+            } else {
+                // (count == 0) ? showAlertDialog("Oops", "Dear didi, patience please!! you cannot open this card until you pass the eligibility test!",
+                //     () => {
+                //         final = askQuestion(questions[count], answers[count], openCard);
+                //     }) : null;
+                openCard();
+                setTimeout(() => {
+                    showAlertDialog("Well well,", "Before you can unlock the mysterious letter, you must prove your wit and wisdom by passing the Great Eligibility Test!",
+                        () => {
+                            final = askQuestion(questions[count], answers[count], revealMessage);
+                        });
+                }, 1000)
+            }
+            if (!final) {
+                return;
+            }
+        });
+
+        function openCard() {
+            card.attr('class', 'open-half');
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(function () {
+                card.attr('class', 'open-fully');
+                timer = null;
+            }, 1000);
+        }
+
+        revealMessage = () => {
+            $id('alertDialog').close();
+            $('.reveal-letter').css('visibility', 'visible');
+            $('.reveal-letter').css('opacity', 1);
+            $('#card.open-fully #card-front, #card.close-half #card-front').css({ 'background': 'url(7.gif) no-repeat', 'background-position': 'center', 'background-color': '#FFEFEF' });
+
+            $('#main-message').addClass('show-slow');
+            setTimeout(() => {
+                $('.baby-crawl').css('opacity', '1');
+            }, 10000)
+        }
+
+        function closeAlertDialogHandler(dialog, cb) {
+            dialog.close();
+            if (cb) cb()
+        }
+
+        function showAlertDialog(title, content, cb) {
+            const dialog = $id('alertDialog');
+            const jqDialog = $('#alertDialog');
+            jqDialog.children('.modal-header').children('.modal-title').text(title);
+            jqDialog.children('.modal-body').text(content);
+            dialog.showModal();
+
+
+            $('#alertDialogClose').off('click');
+            $('#answerInput').val('')
+            $('#alertDialogClose').on('click', () => { closeAlertDialogHandler(dialog, cb) });
+        }
+
+        function questionPrompt(question, cb) {
+            const dialog = $id('questionDialog');
+            const jqDialog = $('#questionDialog');
+            // jqDialog.children('.modal-header').children('.modal-title').text("Question " + (count + 1));
+            jqDialog.children('.modal-body').children('.form-group').children('.modal-question').text(question);
+            dialog.showModal();
+            $('#questionDialogTry').off('click');
+            $('#questionDialogTry').on('click', () => {
+                dialog.close();
+                const answerVal = $('#answerInput').val();
+                if (cb) cb(answerVal)
+            });
+            // $('#questionDialogClose').on('click', () => {
+            //     dialog.close();
+            // });
+        }
+
+        function getLatestQuestion(answer, fcb) {
+            if (count > questions.length - 1) return false
+            switch (answer.toLowerCase()) {
+                case "":
+                    return showAlertDialog("Oops..", "Nice try! but you cannot leave it blank.", () => {
+                        askQuestion(questions[count], answers[count], fcb);
+                    });
+                case null:
+                    return false;
+                case answers[count].toLowerCase():
+                    count++;
+                    if (count == questions.length) {
+                        return showAlertDialog("Congratulations!! 🥳", "You have unlocked a cute little surprise that we have been keeping from you.", () => {
+                            count = questions.length;
+                            // alert("GREAT!");
+                            fcb();
+                        })
+                    }
+                    return showAlertDialog("That was easy!", " Now, let's try another one!", () => {
+                        askQuestion(questions[count], answers[count], fcb);
+                    });
+                case "143":
+                    count = questions.length;
+                    fcb()
+                    return true;
+                default:
+                    return showAlertDialog("Booooo!!", " Wrong Answer, Please try again :) ", () => {
+                        askQuestion(questions[count], answers[count], fcb);
+                    });
+            }
+        }
+
+        function askQuestion(question, answer, finalCb) {
+            console.log(finalCb);
+            questionPrompt(question, (answer) => {
+                getLatestQuestion(answer, finalCb);
+            })
+        }
+
+        closeB.on('click', function () {
+            card.attr('class', 'close-half');
+            if (timer) clearTimerout(timer);
+            timer = setTimeout(function () {
+                card.attr('class', '');
+                timer = null;
+            }, 1000);
+        });
+
+
+        const dialogElem = $id("dialog");
+        const showBtn = $(".show");
+
+        showBtn.on("click", () => {
+            dialogElem.showModal();
+        });
+
+    })
+</script>
+
+</html>
